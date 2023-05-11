@@ -1,0 +1,27 @@
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+.navbar {
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 30px;
+}
+.menuitems {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  font-size: 20px;
+}
+
+.navlink:hover {
+  transform: scale(1.1);
+  transition: ease 0.5s;
+}
+.navlink:active {
+  transform: scale(0.7);
+  transition: ease 0.1s;
+}
