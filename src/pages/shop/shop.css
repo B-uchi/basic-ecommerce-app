@@ -15,6 +15,43 @@ body {
   place-items: center;
 }
 
+.product {
+  background-color: #fff;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 9px;
+  width: 250px;
+  height: 350px;
+}
+#imgcontainer {
+  height: 50%;
+  background-position: center;
+  background-size: cover;
+}
+h3 {
+  margin-top: 10px;
+  border-top: 1px solid #202528;
+}
+.prices {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.buttons {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+button {
+  padding: 7px 5px;
+}
+
 @media (max-width: 1065px) {
   .products {
     grid-template-columns: 1fr 1fr 1fr;
