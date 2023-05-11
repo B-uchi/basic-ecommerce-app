@@ -6,6 +6,6 @@ export const getProducts = async () => {
     const json = await response.json();
     return json.products;
   } catch (error) {
-    return [];
+    return null;
   }
 };
