@@ -1,6 +1,5 @@
 import React from "react";
 import { Plus } from "phosphor-react";
-import "./product.css";
 
 export const Product = (props) => {
   const { id, title, price, thumbnail, discountPercentage, stock } = props.data;
@@ -17,13 +16,13 @@ export const Product = (props) => {
       </div>
       <p>{stock} units left.</p>
       <div className="buttons">
-        <button>
+        <button id="addtocart">
           <div className="addtocart">
             <Plus />
             Add to Cart
           </div>
         </button>
-        <button>
+        <button id="buynow">
           <div className="buynow">
             <Plus />
             Order Now
