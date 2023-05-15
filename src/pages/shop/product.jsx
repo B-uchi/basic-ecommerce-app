@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Plus } from "phosphor-react";
+import { ShopContext } from "../../context/shop-context";
 
 export const Product = (props) => {
   const { id, title, price, thumbnail, discountPercentage, stock } = props.data;
+  const { addToCart, cartItems } = useContext(ShopContext);
+  let cartItemAmount = cartItems[id];
   return (
     <div className="product">
       <div
@@ -16,10 +19,10 @@ export const Product = (props) => {
       </div>
       <p>{stock} units left.</p>
       <div className="buttons">
-        <button id="addtocart">
+        <button id="addtocart" onClick={() => addToCart(id)}>
           <div className="addtocart">
             <Plus />
-            Add to Cart
+            Add to Cart {cartItemAmount > 0 ? <>({cartItemAmount})</> : ""}
           </div>
         </button>
         <button id="buynow">
