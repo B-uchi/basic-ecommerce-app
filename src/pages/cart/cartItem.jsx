@@ -3,7 +3,6 @@ import { ShopContext } from "../../context/shop-context";
 
 export const CartItem = (props) => {
   const { id, title, price, thumbnail, stock } = props.data;
-
   const {
     addToCart,
     removeFromCart,
@@ -27,36 +26,37 @@ export const CartItem = (props) => {
             className="quantity"
             id="decrease"
             onClick={() => {
-              removeFromCart();
+              removeFromCart(id);
             }}
           >
             -
           </button>
           <input
             value={cartItemAmount}
-            onChange={(e) => {
-              updateCartItems(Number(e.target.value), id);
-            }}
+            onChange={(e) => updateCartItems(Number(e.target.value), id)}
           />
           <button
             className="quantity"
             id="increase"
             onClick={() => {
-              addToCart();
+              addToCart(id);
             }}
           >
             +
           </button>
         </div>
       </div>
-      <button
-        id="buynow"
-        onClick={() => {
-          setCartItems((prev) => ({ ...prev, [id]: 0 }));
-        }}
-      >
-        Remove from cart
-      </button>
+      <div className="removebtn">
+        <p>Total: ${Number(cartItemAmount * price)}</p>
+        <button
+          id="removeFromCart"
+          onClick={() => {
+            setCartItems((prev) => ({ ...prev, [id]: 0 }));
+          }}
+        >
+          Remove from cart
+        </button>
+      </div>
     </div>
   );
 };
