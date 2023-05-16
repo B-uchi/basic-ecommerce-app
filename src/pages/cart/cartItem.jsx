@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
 
 export const CartItem = (props) => {
@@ -18,7 +18,7 @@ export const CartItem = (props) => {
       <div className="left-side">
         <div
           className="product-img"
-          style={{ backgroundImage: url({ thumbnail }) }}
+          style={{ backgroundImage: `url(${thumbnail})` }}
         ></div>
         <h2>{title}</h2>
         <p>Quantity in Cart: {cartItemAmount}</p>
