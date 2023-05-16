@@ -10,5 +10,5 @@ Product data is fetched using the "Dummy Products" REST API, more info [here](ht
 
 ### This is a very basic project that implements the basic funtionalities of an ecommerce site, with the ability to view products and add them to cart. And other cart interactions
 
-[Here is the Lie Preview link](https://lugi-shop.netlify.app/)
+[Here is the Live Preview link](https://lugi-shop.netlify.app/)
 
