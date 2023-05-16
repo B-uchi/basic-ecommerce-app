@@ -6,5 +6,9 @@ This project is coded in React, using Vite as the build tool. Dependencies used 
  - Phosphor react (For icons)
  - Plain old CSS (no framework)
 
+Product data is fetched using the "Dummy Products" REST API, more info [here](https://dummyjson.com/)
+
 ### This is a very basic project that implements the basic funtionalities of an ecommerce site, with the ability to view products and add them to cart. And other cart interactions
+
+[Here is the Lie Preview link](https://lugi-shop.netlify.app/)
 
